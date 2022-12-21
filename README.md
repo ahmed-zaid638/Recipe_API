@@ -6,7 +6,7 @@
 - fully responsive design 
 
 
-## Technologies 
+## Technologies / Tools
 - HTML / css / purejs
 - fecth promise  
 - api link : https://www.themealdb.com/api.php
