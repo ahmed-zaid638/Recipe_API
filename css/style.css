@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace, sans-serif;
+}
+main {
+  display: flex;
+  justify-content: flex-end;
+}
+/* search  */
+.search-area {
+  width: 40%;
+  position: fixed;
+  background-color: blue;
+  height: 100vh;
+  left: 0;
+}
+.search-area div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+}
+.search-area div h2 {
+  display: block;
+  margin: 10px 0;
+  font-size: 30px;
+  color: white;
+}
+.search-area .search-input {
+  border: none;
+  outline: none;
+  width: 85%;
+  padding: 10px;
+  box-shadow: rgba(32, 32, 180, 0.2) 0px 7px 29px 0px;
+}
+
+.search-area .search-btn {
+  border: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+.search-area .search-btn i {
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* results */
+.results-area {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  justify-content: center;
+}
+
+.results-area .card {
+  width: 48%;
+  border-radius: 10px;
+  margin-right: 2%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 2%;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.results-area .card .card-img img {
+  width: 100%;
+}
+.results-area .card .card-info {
+  text-align: center;
+  padding: 20px 0;
+}
+.results-area .card .card-info h2 {
+}
+
+.results-area .card .card-info a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  background-color: blue;
+  margin: 10px 0;
+  color: white;
+}
+
+.recipe-details {
+  width: 40%;
+  position: fixed;
+  background-color: blue;
+  height: 100vh;
+  left: 0;
+  display: none;
+}
+.recipe-details.show {
+  display: block;
+}
+
+.recipe-details i {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background-color: rgb(188, 188, 192);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-details .info {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  color: white;
+  padding-right: 15px;
+}
+
+.recipe-details .info h2 {
+  font-size: 30px;
+  padding: 20px 0;
+}
+.recipe-details .info .instruction {
+  font-size: 15px;
+}
+.recipe-details .info p {
+  padding: 20px 0;
+}
+.empty-data {
+  font-size: 30px;
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  main {
+    display: block;
+  }
+  .search-area {
+    position: relative;
+    width: 100%;
+    height: 25vh;
+  }
+  .results-area .card {
+    width: 48%;
+  }
+
+  .results-area {
+    width: 100%;
+  }
+
+  .search-area .search-input {
+    width: 70%;
+  }
+  .search-area div h2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 500px) {
+  .results-area .card {
+    width: 98%;
+  }
+}
